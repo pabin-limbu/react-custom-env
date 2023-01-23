@@ -1,0 +1,163 @@
+TO LEARN:
+--webpack configuration and about webpack.
+-- babel configuration.
+
+
+
+
+redux:
+-one store : reduce storing same data in multiple store.
+-reduce boilerplate.
+- hot reloadin.
+- immutable store.
+- time travel debuging.
+- small in size.
+
+
+CUSTOM SETUP:
+npm init.
+-- create src folder
+-- create index.html inside src folder, create div with id= "App".
+
+create entry point for app.
+-- create index.js in src folder.
+-- link component to the root file in order to render, use rendrer of react-dom.
+	
+web pack:
+-- bundle our compiled jacascript into a single minified file that works in a browser, 
+-- webpack also include a development webserver to serve the application locally while development via webpack.
+-- webpack is also used by CRA behind the scene.
+
+
+configure webpack.
+--web pack is configured via javascript object. and the file is called webpack.config.js and is placed in the project root.
+-- it common to have a seperate donfiguration for development and production.
+
+--create a file webpack.config.dev.js 
+-- set the configuration on above file.
+
+
+BABLE:
+-- bable is a js compiler.
+-- transpile modern js.
+-- compile jsx to js.
+
+BABLE CONFIGURATION:
+-- bable can be configed via .babelrc or in package.json file.
+-- bable preset will allow us to transpile jsx and modern js to run in todays browser.
+
+
+AUTOMATE BUILD PROCESS:
+-- to automate build process use npm script, it is simple automation tool build in npm.
+
+DEBUGGER:
+use debugger key to debug or stopo the code where you want to stop.
+
+
+REACT COMPONENT CREATION APPROACHES:
+-- container vs presentational components.
+
+FOUR common ways to declare react components.
+1. createClass
+2. ES class
+3. function
+4. arrow function
+
+createClass : original way when react was first launched.
+class : uses extend react components.
+function : react asumes that the function return is the componetn to render.
+arrwo function : we can ommit the return keyword in arrow function.
+
+NOTE: avoid var keyword in modern js.
+
+
+when to use class coponent and fuctional componetn?
+-- react version lower then 18.8 function component lacks some key features.
+-- only class component has state, refs and lifecycle methods.
+-- functional components is more powerfull with hooks.
+-- componentDidError and getSnapShotbeforeUpade can only be done with class component.
+
+
+CONTAINER VS PRESENTATION.
+
+
+container:
+--little or no markup.
+--backend for the frontend.
+-- typically use react redux connect.
+-- pass data and action down to presentaiton component.
+-- knows about redux.
+-- often statefull.
+
+
+PRESENTATION:
+-- nearly all markup.
+-- receive data and action via props form container component.
+-- does not know about redux.
+-- rely on props to display UI.
+-- doesnt specify how the data is loaded or mutated.
+-- not statefull
+
+"when you notice that some components dont use props they receive but merely forward them down, its a good sign to introduce 
+come container components."
+
+
+
+HANDING 404 invalid routes.
+-- create a page not found component.
+-- use switch componetn to make sure only one router matches 
+-- if no router matches then route to page not found component by simple adding that component in route at the bottom of the list.
+
+
+REDUX:
+	
+	1
+
+2	2	2
+
+3	3	3	3
+
+4	5	6	7	8
+
+-- above tree is a react component tree where 1 is the parent of all other.
+-- one has the user data and number 4 and 3 also need that user data.
+
+There are three solution for this.
+1. Lift state up. pass data down to each component trough props untill it react the required component also called props drilliing.
+2. React context : you can expose global data with context from a given react component. To access this global data
+   we have to import the context and consume it in required component.
+3. redux : centralized store. any component can connect to the redux store.
+
+REDUX HELPFULL IN:
+- complex data flow.
+-inter-component communication.
+-noh hierarchical data.
+-many action.
+-same data used in many places.
+
+
+when you know you need redux.
+-  "if you arent sure you need it, you dont need it".
+
+	 
+suggested:
+-begin with state
+-lift state as needed
+-try using context or redux when lifting state get annoyng.
+
+
+REDUX cORE PRInCIPLES.
+1. one immutable store. - aids debugging, server rendering make undo and redo possible
+2. actions trigger changes.
+3. State changes are handled by pure function : reducer update state.
+
+
+redux data flow.
+
+ACTION -> STORE <=> REDUCER
+^            |
+|            v
+-------->  REACT
+
+-- react app trigger action the reducer change state in store according to action and store reflect changes in react app.
+
