@@ -161,3 +161,25 @@ ACTION -> STORE <=> REDUCER
 
 -- react app trigger action the reducer change state in store according to action and store reflect changes in react app.
 
+
+history object in props: any component rendered by react router has history props.
+
+
+ownProps: let us access component props and are automatically populated by redux.
+
+
+selectrot functions.
+
+
+HANDLING ASYNC and Errors:
+-thunk dispatch action types that end in _SUCCESS. success suffex.
+- an action can be handeled by many reducers.
+
+IMPORTTANT: loader can be shown using the automatic dispatch of redux where the type end in _success while api call.
+anywhere we receive the _success we can implement some logic.
+
+- use local state when its scope is limited to that component.
+
+
+- use react-toastify for toast message.
+
