@@ -5,6 +5,7 @@ function HomePage() {
   return (
     <div className="jumbotron">
       <h1>Administration</h1>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, velit.
       </p>

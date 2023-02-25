@@ -183,3 +183,7 @@ anywhere we receive the _success we can implement some logic.
 
 - use react-toastify for toast message.
 
+ENZYME
+-configure adapter.
+- tell package.json to call the adapter.
+-enzyme is like css we can use css selector here.
