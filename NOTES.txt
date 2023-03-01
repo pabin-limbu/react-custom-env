@@ -183,7 +183,39 @@ anywhere we receive the _success we can implement some logic.
 
 - use react-toastify for toast message.
 
+
+TESTING:
+snapshot testing.
+-part of jest.
+-create a test file-> import renderer to render component.
+-renderer represent tree which is output of the component.
+- use renderer.create(<component />) to create a component.
+- props can be passed in the component.
+-jest.fn() creates empty functions.
+- renderer creates snapshots and those shots are kept in a folder called snapshots which are created on the same folder of test file.
+-- snapshot testing protect for any accidental changes to component output
+
 ENZYME
 -configure adapter.
 - tell package.json to call the adapter.
 -enzyme is like css we can use css selector here.
+-with shallow render we can search for the component tag
+
+shallow rendering:
+- test one component in isolation.
+
+rendering with mount:
+-search final rendered html
+- pull in react router memoryRouter for testing since the header component  expect react router props passed in.
+- mount render the component along with its children.
+
+NOTE: console.log(component.debug()) -- to output the element in console.
+
+REACT TESTING LIBRARY:
+-compelling alternative to enzyme.
+-there are varieties of queries for testing result. ex getBy, getByText etc.
+-unlike enzyme we dont have to call expect to make assertion.
+- we can get the debug function by destructuring ex const {debug} = renderForm() and call this debug function to see the dom output.
+
+
+
